@@ -23,7 +23,7 @@ int main(){
     }
     
     while(flag!=0){
-        printf(" enter 1 if you want to add element in the beginning \n enter 2 if you want to add element after a specific element \n enter 3 if you want to display all the elements\n enter 4 if you want to know the count");
+        printf(" enter 1 if you want to add element in the beginning \n enter 2 if you want to add element after a specific element \n enter 3 if you want to display all the elements\n enter 4 if you want to know the count\n enter 5 if you want to delete a element");
         scanf("%d",&option);
     switch (option){
         case 1:printf("enter what you want element you want to add at the beginning of the list");
@@ -37,6 +37,10 @@ int main(){
         case 3:display(&p);
                 break;
         case 4:printf("the number of element is:%d\n",count(&p));
+                break;
+        case 5:printf("enter the element you want to delete");
+                scanf("%d",&num);
+                delete(&p,num); 
                 break;
     }
     printf("Do you want to do some more operation if yes enter 1 or else enter 0");
